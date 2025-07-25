@@ -6,7 +6,7 @@ const getHeaders = () => ({
 });
 
 export const createShortUrl = async (originalUrl, customAlias, expiryDate) => {
-  const res = await fetch(`https://cuts-mwph.onrender.com/api/url/shorten`, {
+  const res = await fetch(`https://cuts-j78n.onrender.com/api/url/shorten`, {
     method: 'POST',
     headers: getHeaders(),
     body: JSON.stringify({ originalUrl, customAlias, expiryDate }),
@@ -21,7 +21,7 @@ export const createShortUrl = async (originalUrl, customAlias, expiryDate) => {
 };
 
 export const fetchUserUrls = async () => {
-  const res = await fetch(`https://cuts-mwph.onrender.com/api/url/user`, {
+  const res = await fetch(`https://cuts-j78n.onrender.com/api/url/user`, {
     method: 'GET',
     headers: getHeaders(),
   });
@@ -35,7 +35,7 @@ export const fetchUserUrls = async () => {
 };
 
 export const getUrlAnalytics = async (shortId) => {
-  const res = await fetch(`https://cuts-mwph.onrender.com/api/url/analytics/${shortId}`, {
+  const res = await fetch(`https://cuts-j78n.onrender.com/api/url/analytics/${shortId}`, {
     method: 'GET',
     headers: getHeaders(),
   });

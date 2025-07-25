@@ -14,7 +14,7 @@ connectDB();
 // Middleware
 
 app.use(cors({
-  origin: 'https://cuts-io.vercel.app/',
+  origin: 'https://cuts-io.vercel.app',
   credentials: true,
   methods: ['GET','POST','PUT','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']

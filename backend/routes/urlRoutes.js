@@ -34,6 +34,6 @@ router.get('/analytics/:shortId', async (req, res) => {
 });
 
 
-router.get('/:shortId', redirectUrl);
+
 
 module.exports = router;

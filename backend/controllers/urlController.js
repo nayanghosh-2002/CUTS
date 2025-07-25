@@ -20,7 +20,7 @@ exports.shortenUrl = async (req, res) => {
       shortId = nanoid(8);
     }
 
-    const shortUrl = `https://cuts-mwph.onrender.com/${shortId}`;
+    const shortUrl = `https://cuts-j78n.onrender.com/${shortId}`;
 
     await Url.create({ originalUrl, shortId, userId, expiryDate });
 

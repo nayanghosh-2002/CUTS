@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors'); // UNCOMMENT THIS LINE
+const cors = require('cors'); // Keep this uncommented
 const connectDB = require('./config/db');
 
 
@@ -9,13 +9,18 @@ dotenv.config();
 const app = express();
 
 
-connectDB();
+connectDB(); // Keep this uncommented
 
 // Middleware
 
-// UNCOMMENT THESE LINES for simple CORS
-app.use(cors());
-app.options('*', cors());
+// REINTRODUCE YOUR ORIGINAL CORS CONFIGURATION HERE:
+app.use(cors({
+ origin: 'https://cuts-io.vercel.app/',
+ credentials: true,
+ methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+ allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.options('*', cors()); // Keep this as well
 
 app.use(express.json()); // Keep this uncommented
 

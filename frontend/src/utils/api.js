@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || 'https://cuts-mwph.onrender.com',
+  baseURL: import.meta.env.VITE_BACKEND_URL || 'https://cuts-j78n.onrender.com',
 });
 
 API.interceptors.request.use((req) => {

@@ -15,7 +15,7 @@ const Register = () => {
     setIsError(false); 
 
     try {
-      const res = await fetch('https://cuts-mwph.onrender.com/api/auth/register', {
+      const res = await fetch('https://cuts-j78n.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),

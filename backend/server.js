@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const connectDB = require('./config/db'); // Keep this uncommented
+const cors = require('cors'); // UNCOMMENT THIS LINE
+const connectDB = require('./config/db');
 
 
 dotenv.config();
@@ -8,17 +9,15 @@ dotenv.config();
 const app = express();
 
 
-connectDB(); // Keep this uncommented
+connectDB();
 
 // Middleware
 
-// Keep CORS commented out for now
-// const cors = require('cors');
-// app.use(cors());
-// app.options('*', cors());
+// UNCOMMENT THESE LINES for simple CORS
+app.use(cors());
+app.options('*', cors());
 
-// UNCOMMENT THIS LINE:
-app.use(express.json()); 
+app.use(express.json()); // Keep this uncommented
 
 
 // Keep all custom routes commented out

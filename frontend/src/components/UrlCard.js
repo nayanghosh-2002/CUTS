@@ -4,7 +4,7 @@ const UrlCard = ({ url, onCopy }) => {
   const { originalUrl, shortId, clicks, expiryDate } = url; 
 
   
-  const fullShortUrl = `https://cuts-mwph.onrender.com/${shortId}`; 
+  const fullShortUrl = `https://cuts-j78n.onrender.com/${shortId}`; 
 
   const [copied, setCopied] = useState(false); 
 

@@ -1,7 +1,9 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors'); // Ensure 'cors' is imported
-const connectDB = require('./config/db');
+const dotenv = require('dotenv'); // Keep dotenv for environment variables
+
+// Temporarily remove/comment out these imports for now
+// const cors = require('cors');
+// const connectDB = require('./config/db');
 
 
 dotenv.config();
@@ -9,24 +11,14 @@ dotenv.config();
 const app = express();
 
 
-connectDB();
-
-// Middleware
-
-// TEMPORARILY MODIFIED CORS CONFIGURATION FOR DEBUGGING
-// app.use(cors({
-//  origin: 'https://cuts-io.vercel.app/',
-//  credentials: true,
-//  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-//  allowedHeaders: ['Content-Type', 'Authorization']
-// }));
-app.use(cors()); // Use this simpler, default CORS
-app.options('*', cors()); // Enable pre-flight for all routes
-
-app.use(express.json()); 
+// TEMPORARILY COMMENT OUT ALL MIDDLEWARE AND DB CONNECTION
+// connectDB();
+// app.use(cors());
+// app.options('*', cors());
+// app.use(express.json());
 
 
-// THESE LINES ARE COMMENTED OUT FOR DEBUGGING PURPOSES
+// Ensure these are still commented out
 // const authRoutes = require('./routes/authRoutes');
 // const urlRoutes = require('./routes/urlRoutes');
 // const redirectRoutes = require('./routes/redirectRoutes');
@@ -37,4 +29,5 @@ app.use(express.json());
 
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+// Just start the server with a basic message
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT} with minimal setup`));

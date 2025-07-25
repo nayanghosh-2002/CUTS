@@ -29,7 +29,7 @@ const redirectRoutes = require('./routes/redirectRoutes');
 
 app.use('/api/auth', authRoutes);       
 app.use('/api/url', urlRoutes);         
-app.use('/', redirectRoutes);           
+// app.use('/', redirectRoutes);           
 
 
 const PORT = process.env.PORT || 5000;

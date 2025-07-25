@@ -7,7 +7,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUrls = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/url/all', {
+        const res = await fetch('https://cuts-mwph.onrender.com/api/url/all', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

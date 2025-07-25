@@ -1,7 +1,7 @@
 const Url = require('../models/Url');
 const { nanoid } = require('nanoid');
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+const baseUrl = process.env.BASE_URL || 'https://cuts-mwph.onrender.com';
 
 exports.shortenUrl = async (req, res) => {
   try {
@@ -20,7 +20,7 @@ exports.shortenUrl = async (req, res) => {
       shortId = nanoid(8);
     }
 
-    const shortUrl = `http://localhost:5000/${shortId}`;
+    const shortUrl = `https://cuts-mwph.onrender.com/${shortId}`;
 
     await Url.create({ originalUrl, shortId, userId, expiryDate });
 

@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api/auth';
+const API_BASE = 'https://cuts-mwph.onrender.com/api/auth';
 
 export const login = async (email, password) => {
   const res = await fetch(`${API_BASE}/login`, {

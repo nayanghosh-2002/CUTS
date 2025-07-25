@@ -5,7 +5,7 @@ const Home = () => {
   const [shortenedUrl, setShortenedUrl] = useState(null);
 
   const handleSuccess = (data) => {
-    setShortenedUrl(`http://localhost:5000/${data.shortId}`);
+    setShortenedUrl(`https://cuts-mwph.onrender.com/${data.shortId}`);
   };
 
   return (

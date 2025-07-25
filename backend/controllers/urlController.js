@@ -1,7 +1,7 @@
 const Url = require('../models/Url');
 const { nanoid } = require('nanoid');
 
-const baseUrl = process.env.BASE_URL || 'https://cuts-mwph.onrender.com';
+const baseUrl = process.env.BASE_URL || 'https://cuts-j78n.onrender.com';
 
 exports.shortenUrl = async (req, res) => {
   try {
